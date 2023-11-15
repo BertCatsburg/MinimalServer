@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  nodeapi:
+    build:
+      context: ../build
+      dockerfile: Dockerfile_minimal_server
+    ports:
+      - "3031:3030"
+    image: "minimal_server_image"
+    container_name: "minimal_server"
+    command: ["node", "index.js"]
+#    command: ["sleep", "350d"]
